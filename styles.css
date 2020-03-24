@@ -1,0 +1,108 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.colors-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+.color {
+    flex: 25%;
+    min-height: 220px;
+    transition: .4s linear;
+    cursor: pointer;
+    position: relative;        
+}
+
+.color:hover {
+    filter: brightness(80%);
+}
+
+.refresh {
+    border: none;
+    outline:none;
+    display: inline-block;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 10px;
+    transition: all .4s ease 0s;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bolder;
+    background: #f6b93b;
+    background-color: #f6b93b;
+    color: black;
+}
+
+.refresh:hover{
+    color: black;
+    background:  #f8de7e;
+    border-color: #f8de7e;
+    transition: all 0.4s ease 0s;
+}
+
+.copied {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(50%);
+    color: white;
+    background-color: black;
+    padding: 15px 40px;
+    min-width: 340px;
+    text-align: center;
+    display:none;
+}
+
+.color-hex {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    opacity: 0.5;
+    text-align: center;
+    color:white;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
